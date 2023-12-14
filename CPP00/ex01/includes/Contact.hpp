@@ -7,7 +7,8 @@
 
 namespace MyUtilities
 {
-    bool isNumeric(const std::string &str);
+	bool isNumeric(const std::string &str);
+	bool isProgram(const std::string &str);
 }
 	
 class Contact

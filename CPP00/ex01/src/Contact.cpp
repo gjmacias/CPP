@@ -10,16 +10,28 @@ Contact::~Contact() {}
 
 namespace MyUtilities
 {
-    bool isNumeric(const std::string &str)
-    {
-        for (char c : str)
-        {
-            if (!std::isdigit(c)) {
-                return false; 
-            }
-        }
-        return true;
-    }
+	bool isNumeric(const std::string &str)
+	{
+		for (char c : str)
+		{
+			if (!std::isdigit(c)) {
+				return false; 
+			}
+		}
+		return true;
+	}
+
+	bool isProgram(const std::string &str)
+	{
+		for (char c : str)
+		{
+			if ((c >= '#' && c <= ')') || (c >= '[' && c <= ']q1')
+				|| (c >= '{' && c <= '}')) {
+				return true; 
+			}
+		}
+		return false;
+	}
 }
 
 bool	Contact::setString(const char *s, fields field)
@@ -31,6 +43,12 @@ bool	Contact::setString(const char *s, fields field)
 	if ( input.empty())
 	{
 		std::cout << "Needs some parameter. Try again.\n" << std::endl;
+		std::cin.clear();
+		return (false);
+	}
+	else if ( MyUtilities::isProgram(input))
+	{
+		std::cout << "Error, avoid special characters. Try again.\n" << std::endl;
 		std::cin.clear();
 		return (false);
 	}

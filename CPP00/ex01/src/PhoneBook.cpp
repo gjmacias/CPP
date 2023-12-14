@@ -42,7 +42,7 @@ void	PhoneBook::headerSearchContact(void)
 		this->contacts[i].tableDisplay();
 	}
 	std::cout << "·-------------------------------------------·" << std::endl;
-	std::cout << "Select contact to showype \"EXIT\" to return\n";
+	std::cout << "Select contact to show. Type \"EXIT\" to return\n";
 }
 
 void	PhoneBook::searchContact() 
@@ -70,11 +70,11 @@ void	PhoneBook::searchContact()
 					break;
 				}
 				else {
-					std::cout << "Invalid value. Select Index\n" << std::endl;
+					std::cout << "Invalid value. Select Index or \"EXIT\" to return\n" << std::endl;
 				}
 			}
 			else {
-				std::cout << "Invalid value. Select Index\n" << std::endl;
+				std::cout << "Invalid value. Select Index or \"EXIT\" to return\n" << std::endl;
 			}
 		}
 	}
