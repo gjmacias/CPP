@@ -47,8 +47,8 @@ make_dir:
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | make_dir
 	@echo "$(GREY)Compiling $< to $@ $(WHITE)"
-	@$(CC) $(CFLAGS) $(INCS) -c $< -o $@
-#	@mv $(basename $@).d $(DPS_DIR)
+	@$(CC) $(FLAGS) $(INCS) -c $< -o $@
+	@mv $(basename $@).d $(DPS_DIR)
 
 
 #					--------	RULES PROGRAM	--------					  #

@@ -37,6 +37,13 @@ namespace MyUtilities
 		}
 		return (false);
 	}
+
+	void	controlD(void)
+	{
+		std::cout << "\nExiting from PhoneBook. Bye!!" << std::endl;
+		std::cin.clear();
+		std::exit(EXIT_FAILURE);
+	}
 }
 
 bool	Contact::setString(const char *s, fields field)
@@ -44,7 +51,9 @@ bool	Contact::setString(const char *s, fields field)
 	std::string	input;
 
 	std::cout << "Add contact: " << s;
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+		MyUtilities::controlD();
+	}
 	if ( input.empty())
 	{
 		std::cout << "Needs some parameter. Try again.\n" << std::endl;
@@ -67,7 +76,9 @@ bool	Contact::setNumber(const char *s, fields field)
 	std::string	input;
 
 	std::cout << "Add contact: " << s;
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+		MyUtilities::controlD();
+	}
 	if ( input.length() != 9 || !MyUtilities::isNumeric(input))
 	{
 		std::cout << "Needs 9 numbers to continue. Try again.\n" << std::endl;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 int	main(void) {
 	PhoneBook	myPhoneBook;
@@ -8,10 +9,11 @@ int	main(void) {
 	while (true)
 	{
 		std::cout << "Enter command (ADD, SEARCH, EXIT): "<< std::flush;
-		std::getline(std::cin, input);
-		if (input == "EXIT" || std::cin.eof())
+		if (!std::getline(std::cin, input)) {
+			MyUtilities::controlD();
+		}
+		if (input == "EXIT")
 		{
-			std::cout << "\nExiting from PhoneBook. Bye!!" << std::endl;
 			break;
 		}
 		else if (input == "ADD") {
