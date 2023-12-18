@@ -12,10 +12,12 @@ namespace MyUtilities
 {
 	bool isNumeric(const std::string &str)
 	{
-		for (char c : str)
+		int i = -1;
+
+		while (str[++i])
 		{
-			if (!std::isdigit(c)) {
-				return false; 
+			if (!std::isdigit(str[i])) {
+				return (false); 
 			}
 		}
 		return true;
@@ -23,14 +25,17 @@ namespace MyUtilities
 
 	bool isProgram(const std::string &str)
 	{
-		for (char c : str)
+		int i = -1;
+
+		while (str[++i])
 		{
-			if ((c >= '#' && c <= ')') || (c >= '[' && c <= ']q1')
-				|| (c >= '{' && c <= '}')) {
+			if ((str[i] >= '#' && str[i] <= ')')
+				|| (str[i] >= '[' && str[i] <= ']')
+				|| (str[i] >= '{' && str[i] <= '}')) {
 				return true; 
 			}
 		}
-		return false;
+		return (false);
 	}
 }
 

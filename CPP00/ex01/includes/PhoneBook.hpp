@@ -9,8 +9,8 @@
 class PhoneBook
 {
 	private:
-		bool				showAll;
 		int					id;
+		bool				showAll;
 		static const int	MAX_CONTACTS = 8;
 		Contact				contacts[MAX_CONTACTS];
 	public:

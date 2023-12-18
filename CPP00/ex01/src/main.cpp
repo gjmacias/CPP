@@ -7,9 +7,11 @@ int	main(void) {
 
 	while (true)
 	{
-		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
+		std::cout << "Enter command (ADD, SEARCH, EXIT): "<< std::flush;
 		std::getline(std::cin, input);
-		if (input == "EXIT") {
+		if (input == "EXIT" || std::cin.eof())
+		{
+			std::cout << "\nExiting from PhoneBook. Bye!!" << std::endl;
 			break;
 		}
 		else if (input == "ADD") {
