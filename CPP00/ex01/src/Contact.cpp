@@ -10,6 +10,19 @@ Contact::~Contact() {}
 
 namespace MyUtilities
 {
+	bool isOnlySpace(const std::string &str)
+	{
+		int i = -1;
+
+		while (str[++i])
+		{
+			if (!std::isspace(str[i])) {
+				return (false); 
+			}
+		}
+		return true;
+	}
+
 	bool isNumeric(const std::string &str)
 	{
 		int i = -1;
@@ -40,7 +53,7 @@ namespace MyUtilities
 
 	void	controlD(void)
 	{
-		std::cout << "\nExiting from PhoneBook. Bye!!" << std::endl;
+		std::cout << "\nForcing EXIT from PhoneBook. Bye!!" << std::endl;
 		std::cin.clear();
 		std::exit(EXIT_FAILURE);
 	}
@@ -54,7 +67,7 @@ bool	Contact::setString(const char *s, fields field)
 	if (!std::getline(std::cin, input)) {
 		MyUtilities::controlD();
 	}
-	if ( input.empty())
+	if ( field == FirstName && (input.empty() || MyUtilities::isOnlySpace(input)))
 	{
 		std::cout << "Needs some parameter. Try again.\n" << std::endl;
 		std::cin.clear();
