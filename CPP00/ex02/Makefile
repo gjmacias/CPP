@@ -2,7 +2,7 @@
 
 NAME			=	out
 CC				= 	c++
-FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MD -pedantic -g3
+FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 
 ###############################################################################
 #									SRC										  #
