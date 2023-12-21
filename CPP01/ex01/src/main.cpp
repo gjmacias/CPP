@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-int main() {
+int main()
+{
 	int		size;
 	Zombie	*horde;
 
@@ -41,5 +42,5 @@ int main() {
 	for (int i = 0; i < size; i++) horde[i].announce();
 	delete[] horde;
 
-	return 0;
+	return (0);
 }

@@ -1,4 +1,4 @@
-NAME			=	Harl2.0
+NAME			=	replace
 CC				= 	c++
 FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 
@@ -6,7 +6,7 @@ FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 #									SRC										  #
 ###############################################################################
 
-SRC		=	main.cpp	Harl.cpp
+SRC		=	main.cpp	Sed.cpp
 OBJ		=	$(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 DEPS	=	$(addprefix $(DPS_DIR), $(SRC:.cpp=.d))
 ###############################################################################
