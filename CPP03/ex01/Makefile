@@ -1,6 +1,7 @@
-NAME			=	trap2
+NAME			=	trap1
 CC				= 	c++
-FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
+FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3 $(LEAKS)
+LEAKS			=	-fsanitize=address -fno-omit-frame-pointer
 
 ###############################################################################
 #									SRC										  #

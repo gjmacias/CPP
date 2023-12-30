@@ -1,13 +1,16 @@
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 #include <iostream>
 
-int main() {
-	ClapTrap *c1 = new ClapTrap();
-	ScavTrap *c2 = new ScavTrap("NOT Sr. Scav");
-	ScavTrap *aux = new ScavTrap();
-	ScavTrap *c3 = new ScavTrap(*aux);
+int main()
+{
+	ScavTrap *c1 = new ScavTrap();
+	FragTrap *c2 = new FragTrap();
+	FragTrap *aux = new FragTrap("NOT Sr. Frag");
+	FragTrap *c3 = new FragTrap(*aux);
 
 	std::cout << std::endl;
 
@@ -19,7 +22,7 @@ int main() {
 
 	c1->takeDamage(80);
 	c2->takeDamage(50);
-	c2->takeDamage(50);
+	c2->takeDamage(500);
 	c3->takeDamage(5);
 
 	std::cout << std::endl;
@@ -30,8 +33,9 @@ int main() {
 
 	std::cout << std::endl;
 
-	c2->guardGate();
-	c3->guardGate();
+	c1->guardGate();
+	c2->highFivesGuys();
+	c3->highFivesGuys();
 
 	std::cout << std::endl;
 

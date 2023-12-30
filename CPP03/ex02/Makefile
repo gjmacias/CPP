@@ -1,4 +1,4 @@
-NAME			=	trap1
+NAME			=	trap2
 CC				= 	c++
 FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 

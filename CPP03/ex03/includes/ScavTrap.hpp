@@ -6,19 +6,19 @@
 #include <string>
 #include <iostream>
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap& other);
-		~ScavTrap();
+		virtual ~ScavTrap();
 
 		ScavTrap& operator=(const ScavTrap& other);
 
-		void attack(const std::string& target);
+		virtual void attack(const std::string& target);
 		void guardGate();
-	private:
+	protected:
 };
 
 #endif

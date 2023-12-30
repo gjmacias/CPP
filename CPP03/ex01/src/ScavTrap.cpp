@@ -10,7 +10,7 @@ ScavTrap::ScavTrap()
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 
-	std::cout << this->_name << " ScavTrap created" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " created" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
@@ -23,7 +23,8 @@ ScavTrap::ScavTrap(std::string name)
 	std::cout << "ScavTrap " << this->_name << " created" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other) {
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap() 
+{
 	*this = other;
 
 	std::cout  << "ScavTrap " << this->_name << " copy created" << std::endl;

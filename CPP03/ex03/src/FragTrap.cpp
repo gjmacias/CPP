@@ -22,7 +22,7 @@ FragTrap::FragTrap(std::string name)
 	std::cout << "FragTrap " << this->_name << " created" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& other)
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap()
 {
 	*this = other;
 

@@ -4,13 +4,13 @@
 
 DiamondTrap::DiamondTrap()
 {
-	this->_name = "DiamondTrap";
-	this->ClapTrap::_name = std::string("DiamondTrap").append("_clap_name");
+	this->_name = "Diamond";
+	this->ClapTrap::_name = std::string("Diamond").append("_clap_name");
 	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
 
-	std::cout << this->_name << " DiamondTrap created" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " created" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
@@ -21,18 +21,18 @@ DiamondTrap::DiamondTrap(std::string name)
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
 
-	std::cout << this->_name << " DiamondTrap created" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " created" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& other)
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	*this = other;
 
-	std::cout << this->_name << " DiamondTrap copy created" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " copy created" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap() {
-	std::cout << this->_name << " DiamondTrap destroyed" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " destroyed" << std::endl;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
@@ -43,14 +43,14 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 	this->_energyPoints = other._energyPoints;
 	this->_attackDamage = other._attackDamage;
 
-	std::cout << this->_name << " DiamondTrap = " << other._name << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " = " << other._name << std::endl;
 
 	return *this;
 }
 
 
 
-void DiamondTrap::attack(const std::string& target) const {
+void DiamondTrap::attack(const std::string& target) {
 	this->ScavTrap::attack(target);
 }
 

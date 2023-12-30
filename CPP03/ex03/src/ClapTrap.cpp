@@ -19,7 +19,8 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap " << this->_name << " created" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) {
+ClapTrap::ClapTrap(const ClapTrap& other)
+{
 	*this = other;
 
 	std::cout << "ClapTrap " << this->_name << " copy created" << std::endl;

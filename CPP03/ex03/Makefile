@@ -1,4 +1,4 @@
-NAME			=	trap1
+NAME			=	trap3
 CC				= 	c++
 FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 
@@ -6,7 +6,8 @@ FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 #									SRC										  #
 ###############################################################################
 
-SRC		=	main.cpp	ClapTrap.cpp	ScavTrap.cpp	FragTrap.cpp
+SRC		=	main.cpp	ClapTrap.cpp	ScavTrap.cpp	FragTrap.cpp \
+			DiamondTrap.cpp
 OBJ		=	$(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 DEPS	=	$(addprefix $(DPS_DIR), $(SRC:.cpp=.d))
 ###############################################################################
