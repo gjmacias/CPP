@@ -1,13 +1,14 @@
-NAME			=	animal2
+NAME			=	materia
 CC				= 	c++
-FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
+FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3 $(FLEAKS)
+FLEAKS			=	-fsanitize=address
 
 ###############################################################################
 #									SRC										  #
 ###############################################################################
 
-SRC		=	main.cpp	Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp \
-			WrongCat.cpp Brain.cpp
+SRC		=	main.cpp	AMateria.cpp Character.cpp Cure.cpp Ice.cpp \
+			MateriaSource.cpp
 OBJ		=	$(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 DEPS	=	$(addprefix $(DPS_DIR), $(SRC:.cpp=.d))
 ###############################################################################
@@ -15,8 +16,8 @@ DEPS	=	$(addprefix $(DPS_DIR), $(SRC:.cpp=.d))
 ###############################################################################
 
 SRC_DIR	=	src/
-OBJ_DIR	=	obj/
-DPS_DIR	=	dps/
+OBJ_DIR	=	.obj/
+DPS_DIR	=	.dps/
 
 ###############################################################################
 #									INLUDES									  #
@@ -58,7 +59,7 @@ $(NAME): $(OBJ)
 	@echo "$(ORANGE)Created $(NAME) executable! $(WHITE)" && echo ""
 
 clean:
-	@echo "$(RED)Removing ON $(NAME); OBJs... $(WHITE)"
+	@echo "$(RED)Removing ON $(NAME); OBJs and DEPs... $(WHITE)"
 	@/bin/rm -rf $(OBJ_DIR) $(DPS_DIR)
 	@echo "$(ORANGE)Done!$(DEF_COLOR)" && echo ""
 

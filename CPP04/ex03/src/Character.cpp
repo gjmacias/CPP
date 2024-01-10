@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Character::Character() {}
+Character::Character() : _nEquiped(0) {}
 
 Character::Character(const std::string& name)
 		: _name(name),
@@ -10,7 +10,7 @@ Character::Character(const std::string& name)
 {
 	int	i = -1;
 
-	while (++i < Character::kInventorySize) {
+	while (++i < Character::InventorySize) {
 		this->_inventory[i] = NULL;
 	}
 }
@@ -25,12 +25,12 @@ Character::~Character() {
 	}
 }
 
-Character& Character::operator=(const Character& other) {
+Character& Character::operator=(const Character& other)
+{
 	this->_name = other._name;
 	this->_nEquiped = other._nEquiped;
-	for (int i = 0; i < Character::kInventorySize; i++) {
-		//this->_inventory[i] = other._inventory[i]; // shallow copy
-		this->_inventory[i] = other._inventory[i]->clone(); // deep copy
+	for (int i = 0; i < Character::InventorySize; i++) {
+		this->_inventory[i] = other._inventory[i]->clone();
 	}
 	return *this;
 }
@@ -42,15 +42,19 @@ const std::string& Character::getName() const {
 	return this->_name;
 }
 
-void Character::equip(AMateria *m) {
-	if (this->_nEquiped < Character::kInventorySize) {
-		this->_inventory[this->_nEquiped] = m; // shallow copy
+void Character::equip(AMateria *m)
+{
+	if (this->_nEquiped < Character::InventorySize)
+	{
+		this->_inventory[this->_nEquiped] = m;
 		this->_nEquiped++;
 	}
 }
 
-void Character::unequip(int idx) {
-	if (idx >= 0 && idx < this->_nEquiped) {
+void Character::unequip(int idx)
+{
+	if (idx >= 0 && idx < this->_nEquiped)
+	{
 		delete this->_inventory[idx];
 		int i = idx;
 		for (; i < this->_nEquiped - 1; i++) {
@@ -61,10 +65,12 @@ void Character::unequip(int idx) {
 	}
 }
 
-void Character::use(int idx, ICharacter &target) {
+void Character::use(int idx, ICharacter &target)
+{
 	if (idx >= 0 && idx < this->_nEquiped) {
 		this->_inventory[idx]->use(target);
-	} else {
+	}
+	else {
 		std::cout << "can't use materia, index " << idx << " is empty" << std::endl;
 	}
 }
