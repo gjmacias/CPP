@@ -43,6 +43,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 
 
 
+
 void ClapTrap::attack(const std::string &target)
 {
 	if (this->_hitPoints == 0) {

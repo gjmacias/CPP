@@ -50,6 +50,8 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 
 
 
+
+
 void DiamondTrap::attack(const std::string& target) {
 	this->ScavTrap::attack(target);
 }
