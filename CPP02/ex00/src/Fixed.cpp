@@ -24,6 +24,9 @@ Fixed& Fixed::operator=(const Fixed& other) {
 	return *this;
 }
 
+
+
+
 void Fixed::setRawBits(const int rawBits) {
 	std::cout << "setRawBits member function called" << std::endl;
 	this->_rawBits = rawBits;
