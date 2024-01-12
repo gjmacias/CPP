@@ -42,13 +42,35 @@ int main()
 	Animal				*animals[N_ANIMALS];
 	std::stringstream	ss;
 
-	for (int i = 0; i < N_ANIMALS; i++) {
+	/*
+	**	To SEE the ERROR:
+	
+	for (int i = 0; i < N_ANIMALS; i++)
+	{
+		if (i % 3 == 0) {
+			animals[i] = new Cat();
+		} 
+		else if (i % 3 == 1) {
+			animals[i] = new Dog();
+		}
+		else
+			animals[i] = new Animal;
+	}
+
+	**	DELETE the "for" BELOW 
+	*/
+
+	for (int i = 0; i < N_ANIMALS; i++)
+	{
 		if (i % 2 == 0) {
 			animals[i] = new Cat();
-		} else {
+		} 
+		else {
 			animals[i] = new Dog();
 		}
 	}
+
+	// THIS	^^^^^^^ !!
 
 	std::cout << std::endl;
 
@@ -60,7 +82,7 @@ int main()
 
 	for (int i = 0; i < N_ANIMALS; i++)
 	{
-		for (int j = 0; j < 100; j++)
+		for (int j = 0; j < Brain::getConstant() + 1; j++)
 		{
 			ss << "Animal[" << i << "]: idea :" << j;
 			animals[i]->setIdea(j, ss.str());

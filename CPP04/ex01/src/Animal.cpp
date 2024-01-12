@@ -37,12 +37,16 @@ void Animal::makeSound(void) const {
 std::string	Animal::getIdea(unsigned int n) const
 {
 	std::stringstream ss;
-	ss << "Animal " << n << ": does not have a brain.";
+
+	(void)n;
+	ss << "Animal does not have a brain ._.";
 	return ss.str();
 }
 
-void	Animal::setIdea(unsigned int n, std::string idea) {
-	std::cout << "animal " << n << " CANNOT think about: " << idea << std::endl;
+void	Animal::setIdea(unsigned int n, std::string idea)
+{
+	(void)n;
+	std::cout << "Animal CANNOT think about: <<" << idea << ">>" << std::endl;
 }
 
 const std::string& Animal::getType() const {

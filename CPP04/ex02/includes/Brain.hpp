@@ -15,6 +15,7 @@ class Brain
 
 		std::string		getIdea(unsigned int n) const;
 		void			setIdea(unsigned int n, std::string idea);
+		static int		getConstant(void);
 	private:
 		static const int	NIdeas = 100;
 		std::string			ideas[NIdeas];

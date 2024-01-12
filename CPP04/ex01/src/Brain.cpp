@@ -32,10 +32,15 @@ Brain& Brain::operator=(const Brain& other)
 
 
 
-std::string	Brain::getIdea(unsigned int n) const{
-	return (this->ideas[n]);
+std::string	Brain::getIdea(unsigned int n) const
+{
+	if (n < 100) return (this->ideas[n]);
+	else return ("I'm thinking too much");
 }
 
 void	Brain::setIdea(unsigned int n, std::string idea) {
-	this->ideas[n] = idea;
+	if (n < 100) this->ideas[n] = idea;
+}
+int	Brain::getConstant(void) {
+	return((int)NIdeas);
 }

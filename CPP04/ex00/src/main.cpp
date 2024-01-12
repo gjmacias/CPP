@@ -28,9 +28,9 @@ int main() {
 
 	std::cout << std::endl;
 
-	delete animal;
 	delete dog;
 	delete cat;
+	delete animal;
 
 	/**********************************************************/
 
@@ -51,6 +51,6 @@ int main() {
 
 	std::cout << std::endl;
 
-	delete wAnimal;
 	delete wCat;
+	delete wAnimal;
 }
