@@ -1,76 +1,136 @@
 #include "Character.hpp"
+#include "Floor.hpp"
 
 #include <iostream>
 
-Character::Character() : _nEquiped(0) {}
+/*********** CONSTRUCTOR & DESTRUCTOR ***********/
 
-Character::Character(const std::string& name)
-		: _name(name),
-		  _nEquiped(0)		  
+Character::Character( void ) : _name("Who"), _floor(NULL)
 {
 	int	i = -1;
 
-	while (++i < Character::InventorySize) {
+	while (++i < N_SLOTS) {
 		this->_inventory[i] = NULL;
 	}
 }
 
-Character::Character(const Character& other) {
-	*this = other;
+Character::Character(const std::string name) : _name(name), _floor(NULL)
+{
+	int	i = -1;
+
+	while (++i < N_SLOTS) {
+		this->_inventory[i] = NULL;
+	}
 }
 
-Character::~Character() {
-	for (int i = 0; i < this->_nEquiped; i++) {
-		delete this->_inventory[i];
+Character::Character(const Character& other) : _floor(NULL)
+{
+	int	i = -1;
+
+	while (++i < N_SLOTS)
+	{
+		if (other._inventory[i]) {
+			this->_inventory[i] = other._inventory[i]->clone();
+		}
+		else {
+			this->_inventory[i] = NULL;
+		}
+	}
+	this->_name = other._name;
+}
+
+Character::~Character( void ) 
+{
+	int	i = -1;
+	Floor *tmp;
+
+	while (++i < N_SLOTS)
+	{
+		if (this->_inventory[i] && this->_inventory[i]->getType() != "Seems empty") { 
+			delete this->_inventory[i];
+		}
+		else {
+			this->_inventory[i] = NULL;
+		}
+	}
+	while (this->_floor)
+	{
+		tmp = this->_floor->getNext();
+		delete this->_floor;
+		this->_floor = tmp;
 	}
 }
 
 Character& Character::operator=(const Character& other)
 {
-	this->_name = other._name;
-	this->_nEquiped = other._nEquiped;
-	for (int i = 0; i < Character::InventorySize; i++) {
-		this->_inventory[i] = other._inventory[i]->clone();
+	int	i = -1;
+
+	while (++i < N_SLOTS)
+	{
+		if (this->_inventory[i] && this->_inventory[i]->getType() != "Seems empty") { 
+			delete this->_inventory[i];
+		}
+		if (other._inventory[i] != NULL) {
+			this->_inventory[i] = other._inventory[i]->clone();
+		}
+		else {
+			this->_inventory[i] = NULL;
+		}
 	}
-	return *this;
+	this->_name = other._name;
+	return (*this);
 }
 
+/*********** FUNCTIONS ***********/
 
-
-
-const std::string& Character::getName() const {
+const std::string& Character::getName( void ) const {
 	return this->_name;
 }
 
 void Character::equip(AMateria *m)
 {
-	if (this->_nEquiped < Character::InventorySize)
+	int	i = -1;
+
+	while (++i < N_SLOTS)
 	{
-		this->_inventory[this->_nEquiped] = m;
-		this->_nEquiped++;
+		if (this->_inventory[i] == NULL) 
+		{
+			this->_inventory[i] = m;
+			break ;
+		}
+	}
+	if (i == N_SLOTS)
+	{
+		std::cout << this->getName() << ": IS MAX POWER, do not underestimete me:" << std::endl;
+		std::cout << "<< WATCH:  posibly memory leaks>>" << std::endl;
 	}
 }
 
 void Character::unequip(int idx)
 {
-	if (idx >= 0 && idx < this->_nEquiped)
+	Floor*	tmp;
+
+	if (idx >= 0 && idx < N_SLOTS && this->_inventory[idx])
 	{
-		delete this->_inventory[idx];
-		int i = idx;
-		for (; i < this->_nEquiped - 1; i++) {
-			this->_inventory[i] = this->_inventory[i + 1];
+		tmp = new Floor();
+		if (!tmp)
+		{
+			std::cout << "can't THROW materia, to the FLOOR: " << this->_name; 
+			std::cout << " keeps:  " << idx << ": " << std::endl;
+			return ;
 		}
-		this->_inventory[i] = NULL;
-		--(this->_nEquiped);
+		tmp->add(this->_floor, tmp, this->_inventory[idx]);
+		this->_floor = tmp;
+		this->_inventory[idx] = NULL;
 	}
 }
 
 void Character::use(int idx, ICharacter &target)
 {
-	if (idx >= 0 && idx < this->_nEquiped) {
+	if (idx >= 0 && idx < N_SLOTS && this->_inventory[idx]) {
 		this->_inventory[idx]->use(target);
 	}
 	else {
-		std::cout << "can't use materia, index " << idx << " is empty" << std::endl;
+		std::cout << "can't use materia, index : " << idx << " , is empty" << std::endl;
 	}
 }

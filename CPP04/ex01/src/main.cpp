@@ -11,6 +11,25 @@
 
 int main()
 {
+	std::cout << "==================   CLONE TEST   ==================\n" << std::endl;
+
+	Cat *cat1 = new Cat();
+	Cat *cat2 = new Cat(*cat1);
+	std::cout << std::endl;
+	Dog *dog1 = new Dog();
+	Dog *dog2 = new Dog();
+
+	std::cout << std::endl;
+	*dog2 = *dog1;
+	std::cout << std::endl;
+	
+	delete cat1;
+	delete cat2;
+	delete dog1;
+	delete dog2;
+
+	std::cout << std::endl;
+
 	std::cout << "==================   BASIC TEST   ==================\n" << std::endl;
 
 	Dog *dog = new Dog();
@@ -33,15 +52,14 @@ int main()
 
 	std::cout << std::endl;
 
-
-
-
-
 	std::cout << "================ SUBJECT ARRAY TEST ================\n" << std::endl;
 
 	Animal				*animals[N_ANIMALS];
 	std::stringstream	ss;
 
+	/*
+	**	That also works:
+	
 	for (int i = 0; i < N_ANIMALS; i++)
 	{
 		if (i % 3 == 0) {
@@ -54,6 +72,18 @@ int main()
 			animals[i] = new Animal;
 	}
 
+	**	DELETE the "for" BELOW 
+	*/
+
+	for (int i = 0; i < N_ANIMALS; i++)
+	{
+		if (i % 2 == 0) {
+			animals[i] = new Cat();
+		} 
+		else {
+			animals[i] = new Dog();
+		}
+	}
 	std::cout << std::endl;
 
 	for (int i = 0; i < N_ANIMALS; i++) {

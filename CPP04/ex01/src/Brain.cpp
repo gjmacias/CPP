@@ -9,8 +9,12 @@ Brain::Brain()
 
 Brain::Brain(const Brain& other)
 {
-	*this = other;
+	int	i = -1;
 
+	while (++i <  NIdeas)
+	{
+		this->ideas[i] = other.ideas[i];
+	}
 	std::cout << "Brain: Copy constructor" << std::endl;
 }
 

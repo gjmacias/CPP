@@ -2,25 +2,26 @@
 
 #include <iostream>
 
-Cure::Cure() : AMateria("cure") {}
+/*********** CONSTRUCTOR & DESTRUCTOR ***********/
 
-Cure::Cure(const Cure& other) : AMateria("cure") {
+Cure::Cure( void ) : AMateria("cure") {}
+
+Cure::Cure( const Cure& other ) : AMateria("cure") {
 	*this = other;
 }
 
-Cure::~Cure() {}
+Cure::~Cure( void ) {}
 
-Cure& Cure::operator=(const Cure& other) {
+Cure& Cure::operator=( const Cure& other ) {
 	this->_type = other._type;
 
-	return *this;
+	return (*this);
 }
 
+/*********** FUNCTIONS ***********/
 
-
-
-AMateria* Cure::clone() const {
-	return new Cure(*this);
+AMateria* Cure::clone( void ) const {
+	return (new Cure(*this));
 }
 
 void Cure::use(ICharacter& target) {

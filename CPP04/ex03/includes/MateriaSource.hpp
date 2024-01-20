@@ -6,20 +6,21 @@
 # include "AMateria.hpp"
 # include "IMateriaSource.hpp"
 
+# define N_MSIZE	4
+
 class MateriaSource : public IMateriaSource
 {
 	public:
-		MateriaSource();
-		MateriaSource(const MateriaSource& other);
-		~MateriaSource();
+		MateriaSource( void );
+		MateriaSource( const MateriaSource& other );
+		~MateriaSource( void );
 
-		MateriaSource& operator=(const MateriaSource& other);
+		MateriaSource& operator=( const MateriaSource& other );
 
-		void				learnMateria(AMateria *materia);
-		AMateria*			createMateria(const std::string& type);
+		void				learnMateria( AMateria *materia );
+		AMateria*			createMateria( const std::string& type );
 	private:
-		static const int	MateriaSize = 4;
-		AMateria*			_materias[MateriaSource::MateriaSize];
+		AMateria*			_materias[N_MSIZE];
 		int					_nLearned;
 };
 

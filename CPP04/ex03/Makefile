@@ -8,7 +8,7 @@ FLEAKS			=	-fsanitize=address
 ###############################################################################
 
 SRC		=	main.cpp	AMateria.cpp Character.cpp Cure.cpp Ice.cpp \
-			MateriaSource.cpp
+			MateriaSource.cpp Floor.cpp
 OBJ		=	$(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 DEPS	=	$(addprefix $(DPS_DIR), $(SRC:.cpp=.d))
 ###############################################################################

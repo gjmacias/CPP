@@ -1,6 +1,6 @@
 NAME			=	animal1
 CC				= 	c++
-FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
+FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3 -fsanitize=address
 
 ###############################################################################
 #									SRC										  #

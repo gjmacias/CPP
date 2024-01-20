@@ -2,25 +2,27 @@
 
 #include <iostream>
 
-Ice::Ice() : AMateria("ice") {}
+/*********** CONSTRUCTOR & DESTRUCTOR ***********/
 
-Ice::Ice(const Ice& other) : AMateria("ice") {
+Ice::Ice( void ) : AMateria("ice") {}
+
+Ice::Ice( const Ice& other ) : AMateria("ice") {
 	*this = other;
 }
 
-Ice::~Ice() {}
+Ice::~Ice( void ) {}
 
-Ice& Ice::operator=(const Ice& other) {
+Ice& Ice::operator=( const Ice& other )
+{
 	this->_type = other._type;
 
-	return *this;
+	return (*this);
 }
 
+/*********** FUNCTIONS ***********/
 
-
-
-AMateria* Ice::clone() const {
-	return new Ice(*this);
+AMateria* Ice::clone( void ) const {
+	return (new Ice(*this));
 }
 
 void Ice::use(ICharacter& target) {
