@@ -43,3 +43,4 @@ void	AMateria::use(ICharacter& target) {
 void	AMateria::reset( void ) {
 	this->_type =  "";
 }
+

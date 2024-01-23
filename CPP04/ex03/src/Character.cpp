@@ -46,19 +46,23 @@ Character::~Character( void )
 
 	while (++i < N_SLOTS)
 	{
-		if (this->_inventory[i] && this->_inventory[i]->getType() != "Seems empty") { 
+		std::cout << "INVENTORY: " << i << std::endl;
+		if (this->_inventory[i] == 0) {
 			delete this->_inventory[i];
 		}
 		else {
 			this->_inventory[i] = NULL;
 		}
 	}
+	std::cout << "INVENTORY: OK" << std::endl;
 	while (this->_floor)
 	{
+		std::cout << "FLOOR: " << i << std::endl;
 		tmp = this->_floor->getNext();
 		delete this->_floor;
 		this->_floor = tmp;
 	}
+	std::cout << "FLOOR: OK	" << std::endl;
 }
 
 Character& Character::operator=(const Character& other)
@@ -101,7 +105,7 @@ void Character::equip(AMateria *m)
 	}
 	if (i == N_SLOTS)
 	{
-		std::cout << this->getName() << ": IS MAX POWER, do not underestimete me:" << std::endl;
+		std::cout << this->getName() << ": IS MAX POWER, do not underestimate me:" << std::endl;
 		std::cout << "<< WATCH:  posibly memory leaks>>" << std::endl;
 	}
 }
