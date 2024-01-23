@@ -37,74 +37,74 @@ int main( void )
 		delete src;
 	}
 	{
-		IMateriaSource* src = new MateriaSource();
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
+		// IMateriaSource* src = new MateriaSource();
+		// src->learnMateria(new Ice());
+		// src->learnMateria(new Cure());
+		// src->learnMateria(new Ice());
+		// src->learnMateria(new Cure());
 		
-		std::cout << std::endl;
+		// std::cout << std::endl;
 
-		Character* me = new Character("me");
-		std::cout << "IT'S ME: " << std::endl;
-		AMateria* tmp;
-		tmp = src->createMateria("ice");
-		std::cout << "create ice" << std::endl;
-		me->equip(tmp);
-		std::cout << "ME: equip ice" << std::endl;
-		tmp = src->createMateria("cure");
-		std::cout << "create cure" << std::endl;;
-		me->equip(tmp);
-		std::cout << "ME: equip cure" << std::endl;
-		me->equip(tmp);
-		std::cout << "ME: equip cure" << std::endl;
-		me->equip(tmp);
-		std::cout << "ME: equip cure" << std::endl;
+		// Character* me = new Character("me");
+		// std::cout << "IT'S ME: " << std::endl;
+		// AMateria* tmp;
+		// tmp = src->createMateria("ice");
+		// std::cout << "create ice" << std::endl;
+		// me->equip(tmp);
+		// std::cout << "ME: equip ice" << std::endl;
+		// tmp = src->createMateria("cure");
+		// std::cout << "create cure" << std::endl;;
+		// me->equip(tmp);
+		// std::cout << "ME: equip cure" << std::endl;
+		// me->equip(tmp);
+		// std::cout << "ME: equip cure" << std::endl;
+		// me->equip(tmp);
+		// std::cout << "ME: equip cure" << std::endl;
 
-		std::cout << std::endl;
+		// std::cout << std::endl;
 
-		ICharacter* bob = new Character(*me);
-		std::cout << "NOW BOB: " << std::endl;
-		bob->equip(tmp);
-		std::cout << "BOB: equip cure" << std::endl;
-		me->use(0, *bob);
-		std::cout << "ME: use 0 in bob" << std::endl;
-		me->use(1, *bob);
-		std::cout << "ME: use 1 in bob" << std::endl;	
-		bob->use(1, *bob);
-		std::cout << "BOB: use 1 in bob" << std::endl;
+		// ICharacter* bob = new Character(*me);
+		// std::cout << "NOW BOB: " << std::endl;
+		// bob->equip(tmp);
+		// std::cout << "BOB: equip cure" << std::endl;
+		// me->use(0, *bob);
+		// std::cout << "ME: use 0 in bob" << std::endl;
+		// me->use(1, *bob);
+		// std::cout << "ME: use 1 in bob" << std::endl;	
+		// bob->use(1, *bob);
+		// std::cout << "BOB: use 1 in bob" << std::endl;
 
-		std::cout << std::endl;
+		// std::cout << std::endl;
 
 
-		me->unequip(1);
-		std::cout << "ME: unequip 1" << std::endl;
-		me->unequip(0);
-		std::cout << "ME: unequip 0" << std::endl;
-		me->unequip(1);
-		std::cout << "ME: unequip 1" << std::endl;
-		bob->unequip(0);
-		std::cout << "BOB: unequip 0" << std::endl;
-		std::cout << "NOW BOB: " << std::endl;
-		bob->equip(tmp);
-		tmp = src->createMateria("cure");
-		std::cout << "create cure" << std::endl;;
-		me->equip(tmp);
-		std::cout << "ME: equip cure" << std::endl;
+		// me->unequip(1);
+		// std::cout << "ME: unequip 1" << std::endl;
+		// me->unequip(0);
+		// std::cout << "ME: unequip 0" << std::endl;
+		// me->unequip(1);
+		// std::cout << "ME: unequip 1" << std::endl;
+		// bob->unequip(0);
+		// std::cout << "BOB: unequip 0" << std::endl;
+		// std::cout << "NOW BOB: " << std::endl;
+		// bob->equip(tmp);
+		// tmp = src->createMateria("cure");
+		// std::cout << "create cure" << std::endl;;
+		// me->equip(tmp);
+		// std::cout << "ME: equip cure" << std::endl;
 
-		me->use(0, *bob);
-		std::cout << "use 0 in bob" << std::endl;
-		me->use(3, *bob);
-		std::cout << "ME: use 0 in bob" << std::endl;
+		// me->use(0, *bob);
+		// std::cout << "use 0 in bob" << std::endl;
+		// me->use(3, *bob);
+		// std::cout << "ME: use 0 in bob" << std::endl;
 
-		std::cout << std::endl;
+		// std::cout << std::endl;
 
-		delete bob;
-		std::cout << "chao bob" << std::endl;
-		delete me;
-		std::cout << "chao me " << std::endl;
-		delete src;
-		std::cout << "chao src " << std::endl;
+		// delete bob;
+		// std::cout << "chao bob" << std::endl;
+		// delete me;
+		// std::cout << "chao me " << std::endl;
+		// delete src;
+		// std::cout << "chao src " << std::endl;
 	}
 	return (0);
 }
