@@ -67,7 +67,7 @@ Character& Character::operator=(const Character& other)
 
 	while (++i < N_SLOTS)
 	{
-		if (this->_inventory[i] && this->_inventory[i]->getType() != "Seems empty") { 
+		if (this->_inventory[i] && this->_inventory[i] == 0) { 
 			delete this->_inventory[i];
 		}
 		if (other._inventory[i] != NULL) {

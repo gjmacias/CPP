@@ -14,7 +14,7 @@ Floor::Floor(const Floor& other)
 
 Floor::~Floor( void )
 {
-	if (this->_content->getType() != "Seems empty")
+	if (this->_content == 0)
 	{ 
 		delete this->_content;
 	}

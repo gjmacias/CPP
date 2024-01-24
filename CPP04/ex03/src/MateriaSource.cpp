@@ -69,8 +69,8 @@ void MateriaSource::learnMateria(AMateria *materia)
 	else
 	{
 		std::cout << "Error: MateriaSource: CANNOT learn more: " << std::endl;
-		std::cout << "<< Watch MEMORY LEAKS: free yourself THIS: " << std::endl;
-		std::cout << "| "<< materia->getType() << " |    I'm lazy>>" << std::endl;
+		std::cout << "<< Watch MEMORY LEAKS: free yourself THIS Materia: " << std::endl;
+		std::cout << " I'm lazy>>" << std::endl;
 	}
 }
 
