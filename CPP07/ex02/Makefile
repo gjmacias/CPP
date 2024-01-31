@@ -1,6 +1,7 @@
-NAME			=	iter
+NAME			=	array
 CC				= 	c++
-FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
+FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3 $(FLEAKS)
+FLEAKS			=	-fsanitize=address
 
 ###############################################################################
 #									SRC										  #
