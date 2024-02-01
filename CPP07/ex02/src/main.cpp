@@ -177,7 +177,7 @@ int main(int, char**)
 
 		std::cout << "\n========== ASSIGNMENT OPERATOR (DEEP) ==========\n" << std::endl;
 
-		Array<std::string> copy2(5);
+		Array<std::string> copy2(copy);
 
 		std::cout << "\nSTRING ARRAY:" << std::endl;
 		std::cout << "size: " << arrString.size() << '\n' << std::endl;

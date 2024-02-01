@@ -5,8 +5,8 @@
 
 int main( void )
 {
-	int a = 2;
-	int b = 3;
+	int a = 92;
+	int b = 93;
 
 	::swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;
