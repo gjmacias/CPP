@@ -39,19 +39,24 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void ShrubberyCreationForm::executeAction() const
 {
-	std::ofstream out;
+	std::ofstream out((this->getTarget() + "_shrubbery").c_str());
 
-	out.open((this->getTarget() + "_shrubbery").c_str(), std::ofstream::in | std::ofstream::trunc);
-
-	out << std::endl;
-	out << "               ,@@@@@@@,                  " << std::endl;
-	out << "       ,,,.   ,@@@@@@/@@,  .oo8888o.      " << std::endl;
-	out << "    ,&&%&%&&%,@@@@@/@@@@@@,8888|88/8o     " << std::endl;
-	out << "   ,%&|%&&%&&%,@@@|@@@/@@@88|88888/88'    " << std::endl;
-	out << "   %&&%&%&/%&&%@@|@@/ /@@@88888|88888'    " << std::endl;
-	out << "   %&&%/ %&&%&&@@| V /@@' `88|8 `/88'     " << std::endl;
-	out << "   `&%| ` /%&'    |.|        | '|8'       " << std::endl;
-	out << "       |o|        | |         | |         " << std::endl;
-	out << "       |.|        | |         | |         " << std::endl;
-	out << "    ||/ ._|//_/__/  ,|_//__||/.  |_//__/_ " << std::endl;
+	if (out.is_open())
+	{
+		out << std::endl;
+		out << "               ,@@@@@@@,                  " << std::endl;
+		out << "       ,,,.   ,@@@@@@/@@,  .oo8888o.      " << std::endl;
+		out << "    ,&&%&%&&%,@@@@@/@@@@@@,8888|88/8o     " << std::endl;
+		out << "   ,%&|%&&%&&%,@@@|@@@/@@@88|88888/88'    " << std::endl;
+		out << "   %&&%&%&/%&&%@@|@@/ /@@@88888|88888'    " << std::endl;
+		out << "   %&&%/ %&&%&&@@| V /@@' `88|8 `/88'     " << std::endl;
+		out << "   `&%| ` /%&'    |.|        | '|8'       " << std::endl;
+		out << "       |o|        | |         | |         " << std::endl;
+		out << "       |.|        | |         | |         " << std::endl;
+		out << "    ||/ ._|//_/__/  ,|_//__||/.  |_//__/_ " << std::endl;
+		out.close();
+	}
+	else {
+		std::cerr << "ERROR: CANNOT open the file" << std::endl;
+	}
 }
