@@ -56,7 +56,9 @@ class PmergeMe
 				medians.push_back(endIndex);
 			}
 			int medianIndex = selectMedian(c, medians);
+			std::cout << medianIndex << " ";
 			int mid = partition(c, startIndex, endIndex, medianIndex);
+			std::cout << "mid " << mid << " ";
 
 			fordJohnsonMergeInsertionSort(c, startIndex, mid - 1);
 			fordJohnsonMergeInsertionSort(c, mid, endIndex);
@@ -70,7 +72,7 @@ class PmergeMe
 
 			for (int i = startIndex; i < endIndex; i++)
 			{
-				if (c[i] < c[endIndex])
+				if (c[i] <= c[endIndex])
 				{
 					std::swap(c[i], c[storeIndex]);
 					storeIndex++;
@@ -85,7 +87,7 @@ class PmergeMe
 		static int selectMedian(T &c, const std::vector<int> &medians)
 		{
 			std::vector<int>	temp = medians;
-			std::sort(temp.begin(), temp.endIndex(), Compare<T>(c));
+			std::sort(temp.begin(), temp.end(), Compare<T>(c));
 
 			return (temp[temp.size() / 2]);
 		}
