@@ -35,9 +35,9 @@ BitcoinExchange::~BitcoinExchange() {}
 
 double BitcoinExchange::GetExchangeRate(const std::string &date)
 {
-	std::map<std::string, double>::iterator	i = _data.lower_bound(date);
+	std::map<std::string, double>::iterator	i = _data.upper_bound(date);
 
-	if (i->first != date && i != _data.begin()) {
+	if (i != _data.begin()) {
 		--i;
 	}
 	if (i != _data.end()) {
@@ -106,8 +106,8 @@ void BitcoinExchange::ProcessInput(const std::string &filename)
 	{
 		std::istringstream	ss(line);
 		std::string			date;
-		double				value;
 		char				delimiter;
+		double				value;
 		double				exchangeRate;
 
 		if (!(ss >> date >> delimiter >> value))
