@@ -51,7 +51,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | make_dir
 
 #					--------	RULES PROGRAM	--------					  #
 
-$(NAME): $(OBJ)
+$(NAME): Makefile $(OBJ)
 	@echo "$(GREEN)Compiling $(NAME) $(WHITE)"
 	@$(CC) $(FLAGS) $(INCS) $(OBJ) -o $(NAME)
 	@echo "$(ORANGE)Created $(NAME) executable! $(WHITE)" && echo ""
