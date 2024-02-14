@@ -56,9 +56,7 @@ class PmergeMe
 				medians.push_back(endIndex);
 			}
 			int medianIndex = selectMedian(c, medians);
-			std::cout << medianIndex << " ";
 			int mid = partition(c, startIndex, endIndex, medianIndex);
-			std::cout << "mid " << mid << " ";
 
 			fordJohnsonMergeInsertionSort(c, startIndex, mid - 1);
 			fordJohnsonMergeInsertionSort(c, mid, endIndex);
