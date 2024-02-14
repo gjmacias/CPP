@@ -3,16 +3,6 @@
 
 #include "Data.hpp"
 
-uintptr_t serialize(Data *ptr)
-{
-	return reinterpret_cast<uintptr_t>(ptr);
-}
-
-Data* deserialize(uintptr_t raw)
-{
-	return reinterpret_cast<Data*>(raw);
-}
-
 int main()
 {
 	Data*		data;
@@ -22,9 +12,9 @@ int main()
 	data = new Data;
 
 	std::cout << "Data             : " << data << std::endl;
-	rawData = serialize(data);
+	rawData = Data::serialize(data);
 	std::cout << "Raw data         : " << rawData << std::endl;
-	retData = deserialize(rawData);
+	retData = Data::deserialize(rawData);
 	std::cout << "Deserialized data: " << retData << std::endl;
 
 	delete data;

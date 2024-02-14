@@ -8,6 +8,8 @@
 
 /*********** CONSTRUCTOR & DESTRUCTOR ***********/
 
+Scalar::~Scalar() {}
+
 Scalar::Scalar() {}
 
 Scalar::Scalar(const Scalar& other) { *this = other; }
@@ -20,10 +22,10 @@ Scalar& Scalar::operator=(const Scalar& other) { (void)other; return (*this); }
 
 void Scalar::convert(const std::string& literal)
 {
-	std::string	specialTypes[6] =
+	std::string	specialTypes[8] =
 	{
-		"-inff", "+inff", "nanf",
-		"-inf", "+inf", "nan"
+		"-inff", "+inff", "inff", "nanf",
+		"-inf", "+inf", "inf", "nan"
 	};
 	std::string	toChar = "";
 	int			toInt = 0;
@@ -53,7 +55,7 @@ void Scalar::convert(const std::string& literal)
 		toFloat = static_cast<float>(toDouble);
 	}
 
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 8; i++)
 	{
 		if (literal == specialTypes[i])
 		{

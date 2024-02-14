@@ -6,7 +6,7 @@ FLAGS			= 	-std=c++98 -Wall -Wextra -Werror -MMD -pedantic -g3
 #									SRC										  #
 ###############################################################################
 
-SRC		=	main.cpp
+SRC		=	main.cpp	Data.cpp
 OBJ		=	$(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 DEPS	=	$(addprefix $(DPS_DIR), $(SRC:.cpp=.d))
 ###############################################################################
@@ -51,7 +51,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | make_dir
 
 #					--------	RULES PROGRAM	--------					  #
 
-$(NAME): $(OBJ)
+$(NAME): Makefile $(OBJ)
 	@echo "$(GREEN)Compiling $(NAME) $(WHITE)"
 	@$(CC) $(FLAGS) $(INCS) $(OBJ) -o $(NAME)
 	@echo "$(ORANGE)Created $(NAME) executable! $(WHITE)" && echo ""

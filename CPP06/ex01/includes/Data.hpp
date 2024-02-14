@@ -4,9 +4,17 @@
 
 # include <cstdint>
 
-struct	Data
+class Data
 {
-	int	n;
+	public:
+		~Data();
+		Data();
+		Data(const Data& other);
+		Data& operator=(const Data& other);
+
+		static uintptr_t	serialize(Data *ptr);
+		static Data*		deserialize(uintptr_t raw);
+	private:
 };
 
 #endif
