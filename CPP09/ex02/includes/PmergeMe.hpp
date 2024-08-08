@@ -43,7 +43,7 @@ class PmergeMe
 				return ;
 			}
 
-			std::vector<int> medians;
+			T medians;
 			
 			for (int i = startIndex; i < endIndex; i += 2)
 			{
@@ -82,9 +82,9 @@ class PmergeMe
 
 
 		template <class T>
-		static int selectMedian(T &c, const std::vector<int> &medians)
+		static int selectMedian(T &c, const T &medians)
 		{
-			std::vector<int>	temp = medians;
+			T	temp = medians;
 			std::sort(temp.begin(), temp.end(), Compare<T>(c));
 
 			return (temp[temp.size() / 2]);
