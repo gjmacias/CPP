@@ -21,7 +21,6 @@ BitcoinExchange::BitcoinExchange(const std::string& filename)
 		std::string				rate_str = line.substr(delimiter_pos + 1);
 		double					rate;
 		std::istringstream		rate_stream(rate_str);
-
 		if (!(rate_stream >> rate))
 		{
 			std::cerr << "Error: Invalid rate format in database => " << rate_str << std::endl;
@@ -104,25 +103,26 @@ void BitcoinExchange::ProcessInput(const std::string &filename)
 
 	while (std::getline(file, line))
 	{
-		std::istringstream	ss(line);
-		std::string			date;
-		char				delimiter;
-		double				value;
-		double				exchangeRate;
+		std::string::size_type	delimiter_pos = line.find(',');
+		if (delimiter_pos == std::string::npos)
+		{
+			std::cerr << "Error: Invalid format in line => " << line << std::endl;
+			continue;
+		}
+		std::string				date = line.substr(0, delimiter_pos);
+		std::string				rate_str = line.substr(delimiter_pos + 1);
+		double					value;
+		double					exchangeRate;
+		std::istringstream		rate_stream(rate_str);
+		if (!(rate_stream >> value))
+		{
+			std::cerr << "Error: Invalid RATE format in line => " << line << std::endl;
+			continue;
+		}
 
-		if (!(ss >> date >> delimiter >> value))
-		{
-			std::cerr << "Error: Unable to parse line => " << line << std::endl;
-			continue;
-		}
-		if (delimiter != '|')
-		{
-			std::cerr << "Error: Expected '|' delimiter in line => " << line << std::endl;
-			continue;
-		}
 		if (!ValidateDate(date))
 		{
-			std::cerr << "Error: Invalid date format in line => " << line << std::endl;
+			std::cerr << "Error: Invalid DATE format in line => " << line << std::endl;
 			continue;
 		}
 		if (!ValidateValue(value)) {
