@@ -39,7 +39,7 @@ El primer proyecto de la piscina se centra en introducir a los estudiantes a la 
   **Objetivo:** Continuar el trabajo con estructuras de datos y comprender cómo almacenar y gestionar información de manera más compleja.  
   **Conceptos:** Estructuras de datos simples, gestión de la información.
 
-- [Para acceder al README de CPP00 pulsa aquí](https://github.com/gjmacias/CPP/CPP00/README.md)
+- [Para acceder al README de CPP00 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP00/README.md)
 
 ---
 
@@ -73,7 +73,7 @@ Este proyecto introduce conceptos fundamentales de la programación orientada a 
   **Objetivo:** Ampliar el conocimiento sobre la manipulación de cadenas y el control de flujo.  
   **Conceptos:** Manipulación de cadenas, estructuras condicionales.
 
-- [Para acceder al README de CPP01 pulsa aquí](https://github.com/gjmacias/CPP/CPP01/README.md)
+- [Para acceder al README de CPP01 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP01/README.md)
 
 ---
 
@@ -99,7 +99,7 @@ El enfoque de este proyecto es en la herencia y el polimorfismo en C++, concepto
   **Objetivo:** Explorar problemas avanzados de herencia como el "diamante" en C++.  
   **Conceptos:** Herencia múltiple, resolución de ambigüedades.
 
-- [Para acceder al README de CPP02 pulsa aquí](https://github.com/gjmacias/CPP/CPP02/README.md)
+- [Para acceder al README de CPP02 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP02/README.md)
 
 ---
 
@@ -125,7 +125,7 @@ Este proyecto se centra en conceptos avanzados de la programación orientada a o
   **Objetivo:** Abordar problemas complejos en la herencia múltiple y el polimorfismo.  
   **Conceptos:** Herencia en diamante, resolución de conflictos.
 
-- [Para acceder al README de CPP03 pulsa aquí](https://github.com/gjmacias/CPP/CPP03/README.md)
+- [Para acceder al README de CPP03 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP03/README.md)
 
 ---
 
@@ -151,7 +151,7 @@ Este proyecto profundiza en la programación orientada a objetos y el manejo ava
   **Objetivo:** Revisar y aplicar conceptos de interfaces y herencia en un contexto más amplio.  
   **Conceptos:** Interfaces, revisión de conceptos OOP.
 
-- [Para acceder al README de CPP04 pulsa aquí](https://github.com/gjmacias/CPP/CPP04/README.md)
+- [Para acceder al README de CPP04 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP04/README.md)
 
 
 ---
@@ -174,7 +174,7 @@ Este proyecto se enfoca en el manejo de excepciones y la serialización de datos
   **Objetivo:** Identificar el tipo real de un objeto utilizando `dynamic_cast` y técnicas de RTTI (Run-Time Type Identification).  
   **Conceptos:** Identificación dinámica de tipos, uso de `dynamic_cast`.
 
-- [Para acceder al README de CPP05 pulsa aquí](https://github.com/gjmacias/CPP/CPP05/README.md)
+- [Para acceder al README de CPP05 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP05/README.md)
 
 ---
 
@@ -198,7 +198,7 @@ Este proyecto profundiza en la gestión dinámica de memoria y el uso de casting
   **Objetivo:** Profundizar en el uso de `dynamic_cast` y la gestión dinámica de tipos.  
   **Conceptos:** Casting dinámico, identificación de tipos en tiempo de ejecución.
 
-- [Para acceder al README de CPP06 pulsa aquí](https://github.com/gjmacias/CPP/CPP06/README.md)
+- [Para acceder al README de CPP06 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP06/README.md)
 
 ---
 
@@ -220,7 +220,7 @@ Este proyecto se enfoca en el uso de plantillas y iteradores en C++.
   **Objetivo:** Implementar y manejar arrays genéricos utilizando plantillas.  
   **Conceptos:** Arrays genéricos, manejo de datos en contenedores.
 
-- [Para acceder al README de CPP07 pulsa aquí](https://github.com/gjmacias/CPP/CPP07/README.md)
+- [Para acceder al README de CPP07 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP07/README.md)
 
 ---
 
@@ -242,7 +242,7 @@ Este proyecto profundiza en estructuras de datos avanzadas y algoritmos.
   **Objetivo:** Trabajar con estructuras de datos mutables y entender sus propiedades.  
   **Conceptos:** Mutabilidad, estructuras de datos avanzadas.
 
-- [Para acceder al README de CPP08 pulsa aquí](https://github.com/gjmacias/CPP/CPP08/README.md)
+- [Para acceder al README de CPP08 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP08/README.md)
 
 ---
 
@@ -264,7 +264,7 @@ El último proyecto de la piscina se enfoca en la implementación de algoritmos 
   **Objetivo:** Implementar algoritmos de ordenación y procesamiento de datos utilizando técnicas de combinación.  
   **Conceptos:** Algoritmos de ordenación, técnicas de combinación.
 
-- [Para acceder al README de CPP09 pulsa aquí](https://github.com/gjmacias/CPP/CPP09/README.md)
+- [Para acceder al README de CPP09 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP09/README.md)
 
 ## Cómo Contribuir
 
