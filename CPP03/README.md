@@ -3,57 +3,58 @@
 
 Este proyecto continúa desarrollando nuestras habilidades en C++, enfocándose en conceptos avanzados de la Programación Orientada a Objetos (OOP), el uso de memoria, y la sobrecarga de operadores. A través de estos ejercicios, aprenderemos a manejar mejor la eficiencia del código y la implementación de comportamientos personalizados para nuestras clases.
 
+
 ## Índice
 
-- [Exercise 00: And... OPEN!](#exercise-00-and-open)
-- [Exercise 01: Serena, my love!](#exercise-01-serena-my-love)
-- [Exercise 02: Repetitive work](#exercise-02-repetitive-work)
-- [Exercise 03: Now it's weird!](#exercise-03-now-its-weird)
+- [Exercise 00: And... OPEN! (Claptrap)](#exercise-00-and-open-claptrap)
+- [Exercise 01: Serena, my love! (Claptrap y ScavTrap)](#exercise-01-serena-my-love-claptrap-y-scavtrap)
+- [Exercise 02: Repetitive work (Claptrap, ScavTrap y Fragtrap)](#exercise-02-repetitive-work-claptrap-scavtrap-y-fragtrap)
+- [Exercise 03: Now it's weird! (Claptrap, ScavTrap, Fragtrap y DiamondTrap)](#exercise-03-now-its-weird-claptrap-scavtrap-fragtrap-y-diamondtrap)
 
 ---
 
-## Exercise 00: And... OPEN!
+## Exercise 00: And... OPEN! (Claptrap)
 
 ### Descripción
-En este primer ejercicio, se introduce la creación de clases que simulan la apertura de una caja fuerte. Se implementa una clase `Fixed` que sigue la "Orthodox Canonical Form" (OCF) y se explora cómo operar con números en un formato de punto fijo.
+En este ejercicio, se implementa la clase `Claptrap`, una clase base que representa un robot básico en el contexto de un juego. La clase `Claptrap` incluye atributos y métodos para gestionar su estado y comportamiento.
 
 ### ¿Qué aprendemos?
-- **Orthodox Canonical Form (OCF):** Reforzamos la estructura de clases en C++, asegurándonos de implementar constructor por defecto, constructor de copia, operador de asignación y destructor.
-- **Números de punto fijo:** Aprendemos a manejar una representación numérica de punto fijo, comprendiendo cómo esta representación permite realizar cálculos con números decimales de forma eficiente.
-- **Sobrecarga de operadores:** Iniciamos la sobrecarga de operadores en la clase `Fixed`, lo que permite realizar operaciones aritméticas con objetos de esta clase como si fueran tipos de datos primitivos.
+- **Diseño de clases base:** Aprendemos a diseñar una clase base en C++, estableciendo atributos y métodos que definirán el comportamiento común para las clases derivadas.
+- **Encapsulamiento:** Se implementa el encapsulamiento para proteger los datos y permitir la manipulación controlada de los atributos de la clase.
+- **Métodos y atributos:** Se exploran los conceptos básicos de métodos y atributos en la clase `Claptrap`, y cómo estos se pueden utilizar para definir el comportamiento del objeto.
 
 ---
 
-## Exercise 01: Serena, my love!
+## Exercise 01: Serena, my love! (Claptrap y ScavTrap)
 
 ### Descripción
-En este ejercicio, se profundiza en la implementación de la clase `Fixed`, extendiendo su funcionalidad para incluir comparaciones y operaciones aritméticas adicionales. Se trabaja en hacer que los objetos `Fixed` sean más útiles y comparables entre sí.
+Este ejercicio extiende la clase `Claptrap` para crear una clase derivada llamada `ScavTrap`. La clase `ScavTrap` hereda de `Claptrap` y añade funcionalidades específicas, demostrando cómo se puede extender la funcionalidad de una clase base mediante la herencia.
 
 ### ¿Qué aprendemos?
-- **Operadores de comparación:** Implementamos la sobrecarga de operadores de comparación (>, <, >=, <=, ==, !=) para la clase `Fixed`, permitiendo que los objetos puedan ser comparados directamente.
-- **Operadores aritméticos adicionales:** Añadimos soporte para más operadores aritméticos como suma, resta, multiplicación y división, permitiendo operaciones matemáticas completas con objetos `Fixed`.
-- **Precisión y rendimiento:** Exploramos cómo se manejan las operaciones aritméticas en un entorno de punto fijo, asegurando que se mantenga la precisión necesaria para cálculos delicados.
+- **Herencia simple:** Aprendemos a implementar la herencia en C++, donde `ScavTrap` hereda de `Claptrap`, reutilizando y extendiendo la funcionalidad de la clase base.
+- **Sobreescritura de métodos:** Se explora cómo sobreescribir métodos de la clase base en `ScavTrap` para proporcionar comportamientos específicos adicionales o modificados.
+- **Constructor y destructor en la herencia:** Se estudia la correcta implementación del constructor y destructor en la clase derivada, asegurando la inicialización y limpieza adecuada de los recursos.
 
 ---
 
-## Exercise 02: Repetitive work
+## Exercise 02: Repetitive work (Claptrap, ScavTrap y Fragtrap)
 
 ### Descripción
-En este ejercicio, nos centramos en la implementación de operadores de incremento y decremento para la clase `Fixed`. También se introducen funciones para encontrar el valor mínimo y máximo entre dos objetos `Fixed`.
+En este ejercicio, se introduce una nueva clase derivada llamada `FragTrap`, que hereda tanto de `Claptrap` como de `ScavTrap` (herencia múltiple). Este ejercicio ilustra cómo manejar múltiples niveles de herencia y combina las características de `Claptrap` y `ScavTrap`.
 
 ### ¿Qué aprendemos?
-- **Operadores de incremento y decremento:** Sobrecargamos los operadores de incremento (`++`) y decremento (`--`), tanto en su versión prefija como postfija, para manipular los valores de `Fixed` de manera más intuitiva.
-- **Funciones `min` y `max`:** Implementamos funciones que permiten encontrar el mínimo y máximo entre dos objetos `Fixed`, introduciendo así el concepto de métodos estáticos en C++.
-- **Eficiencia del código:** Mejoramos la eficiencia del código al evitar repeticiones y utilizando sobrecarga de operadores para simplificar las operaciones repetitivas.
+- **Herencia múltiple:** Aprendemos a implementar la herencia múltiple en C++, donde una clase puede heredar de más de una clase base (`FragTrap` hereda de `Claptrap` y `ScavTrap`).
+- **Resolución de ambigüedades:** Se explora cómo resolver ambigüedades y conflictos que pueden surgir cuando una clase derivada hereda de múltiples clases base con atributos o métodos con el mismo nombre.
+- **Composición de comportamientos:** Se estudia cómo combinar y gestionar los comportamientos de las clases base para crear una clase derivada con funcionalidades ampliadas.
 
 ---
 
-## Exercise 03: Now it's weird!
+## Exercise 03: Now it's weird! (Claptrap, ScavTrap, Fragtrap y DiamondTrap)
 
 ### Descripción
-Este ejercicio introduce la conversión implícita y explícita entre tipos de datos en C++. Se trabaja en permitir que la clase `Fixed` se convierta de manera automática a otros tipos numéricos, y viceversa.
+Este ejercicio introduce la clase `DiamondTrap`, que hereda de `Claptrap`, `ScavTrap`, y `FragTrap`, demostrando la complejidad de la herencia múltiple en C++. El objetivo es gestionar la complejidad y el diseño de jerarquías de clases extensas y posiblemente conflictivas.
 
 ### ¿Qué aprendemos?
-- **Conversiones implícitas y explícitas:** Aprendemos a implementar conversiones entre tipos, permitiendo que objetos de `Fixed` se conviertan automáticamente a tipos primitivos como `int` y `float`, y viceversa.
-- **Constructores y operadores de conversión:** Implementamos constructores de conversión y operadores para gestionar las conversiones entre `Fixed` y otros tipos de datos.
-- **Flexibilidad en el uso de clases:** Esta práctica permite que los objetos de la clase `Fixed` sean utilizados en contextos donde se espera un tipo primitivo, lo que mejora la flexibilidad y reutilización de la clase en diferentes situaciones.
+- **Herencia en diamante:** Aprendemos a manejar la herencia en diamante, un patrón de herencia múltiple donde una clase (`DiamondTrap`) hereda de dos clases derivadas de una misma clase base (`Claptrap`).
+- **Método virtual puro y control de acceso:** Se exploran técnicas para manejar problemas como la ambigüedad en la herencia en diamante, utilizando métodos virtuales puros y controlando el acceso a los métodos y atributos de las clases base.
+- **Diseño y organización de clases:** Se practica el diseño de jerarquías de clases complejas y la implementación de soluciones que eviten problemas comunes en la herencia múltiple, asegurando una arquitectura coherente y funcional.
