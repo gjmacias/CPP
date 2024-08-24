@@ -35,7 +35,7 @@ El primer proyecto de la piscina se centra en introducir a los estudiantes a la 
   **Objetivo:** Familiarizarse con el manejo de entradas del usuario y el uso de la biblioteca estándar para gestionar datos.  
   **Conceptos:** Uso de `getline`, manipulación de datos, manejo de entradas y salidas.
 
-- **Exercise 02: Ex02**  
+- **Exercise 02: Class Implementation**  
   **Objetivo:** Continuar el trabajo con estructuras de datos y comprender cómo almacenar y gestionar información de manera más compleja.  
   **Conceptos:** Estructuras de datos simples, gestión de la información.
 
@@ -64,12 +64,16 @@ Este proyecto introduce conceptos fundamentales de la programación orientada a 
 - **Exercise 03: Unnecessary Violence**  
   **Objetivo:** Explorar la herencia y la sobrecarga de operadores en C++.  
   **Conceptos:** Herencia, sobrecarga de operadores.
-
-- **Exercise 04: Harl 2.0**  
+  
+- **Exercise 04: Sed is for losers**  
+  **Objetivo:** Aprender a leer y escribir archivos.  
+  **Conceptos:** std::ifstream y std::ofstream.
+ 
+- **Exercise 05: Harl 2.0**  
   **Objetivo:** Manejar el flujo de control y la programación orientada a objetos.  
   **Conceptos:** Control de flujo, clases y métodos.
 
-- **Exercise 05: Harl Filter**  
+- **Exercise 06: Harl Filter**  
   **Objetivo:** Ampliar el conocimiento sobre la manipulación de cadenas y el control de flujo.  
   **Conceptos:** Manipulación de cadenas, estructuras condicionales.
 
@@ -83,19 +87,19 @@ El enfoque de este proyecto es en la herencia y el polimorfismo en C++, concepto
 
 ### Ejercicios
 
-- **Exercise 00: And.. OPEN! (Claptrap)**  
+- **Exercise 00: First Class in Orthodox Canonical Form**  
   **Objetivo:** Implementar herencia básica y comprender la relación entre clases base y derivadas.  
   **Conceptos:** Herencia simple, clases derivadas.
 
-- **Exercise 01: Serena, my Love! (Claptrap y ScavTrap)**  
+- **Exercise 01: Towards a more useful fixed-point**  
   **Objetivo:** Ampliar la herencia para manejar múltiples niveles y clases derivadas.  
   **Conceptos:** Herencia múltiple, clases derivadas.
 
-- **Exercise 02: Repetitive Work (Claptrap, ScavTrap y Fragtrap)**  
+- **Exercise 02:  Now we're talking**  
   **Objetivo:** Profundizar en el concepto de polimorfismo y su implementación en C++.  
   **Conceptos:** Polimorfismo, clases abstractas.
 
-- **Exercise 03: Now It's Weird! (Claptrap, ScavTrap, Fragtrap y DiamondTrap)**  
+- **Exercise 03: NBSP**  
   **Objetivo:** Explorar problemas avanzados de herencia como el "diamante" en C++.  
   **Conceptos:** Herencia múltiple, resolución de ambigüedades.
 
@@ -109,21 +113,21 @@ Este proyecto se centra en conceptos avanzados de la programación orientada a o
 
 ### Ejercicios
 
-- **Exercise 00: And.. OPEN! (Claptrap)**  
-  **Objetivo:** Trabajar con herencia y polimorfismo avanzado en un contexto más complejo.  
-  **Conceptos:** Herencia avanzada, uso de constructores y destructores.
+- **Exercise 00: And... OPEN! (Claptrap)**  
+  **Objetivo:** Implementar la clase base `Claptrap`, un robot básico en un juego.  
+  **Conceptos:** Diseño de clases base, encapsulamiento, métodos y atributos.
 
-- **Exercise 01: Serena, my Love! (Claptrap y ScavTrap)**  
-  **Objetivo:** Implementar y comprender el manejo de excepciones en un entorno orientado a objetos.  
-  **Conceptos:** Manejo de excepciones, uso de `try`, `catch`, `throw`.
+- **Exercise 01: Serena, my love! (Claptrap y ScavTrap)**  
+  **Objetivo:** Extender `Claptrap` para crear la clase derivada `ScavTrap` con funcionalidades adicionales.  
+  **Conceptos:** Herencia simple, sobreescritura de métodos, constructor y destructor en herencia.
 
-- **Exercise 02: Repetitive Work (Claptrap, ScavTrap y Fragtrap)**  
-  **Objetivo:** Implementar y gestionar clases con múltiples niveles de herencia.  
-  **Conceptos:** Herencia múltiple, gestión de recursos.
+- **Exercise 02: Repetitive work (Claptrap, ScavTrap y Fragtrap)**  
+  **Objetivo:** Introducir la clase `FragTrap`, que hereda de `Claptrap` y `ScavTrap`.  
+  **Conceptos:** Herencia múltiple, resolución de ambigüedades, composición de comportamientos.
 
-- **Exercise 03: Now It's Weird! (Claptrap, ScavTrap, Fragtrap y DiamondTrap)**  
-  **Objetivo:** Abordar problemas complejos en la herencia múltiple y el polimorfismo.  
-  **Conceptos:** Herencia en diamante, resolución de conflictos.
+- **Exercise 03: Now it's weird! (Claptrap, ScavTrap, Fragtrap y DiamondTrap)**  
+  **Objetivo:** Crear la clase `DiamondTrap`, gestionando la complejidad de la herencia en diamante.  
+  **Conceptos:** Herencia en diamante, métodos virtuales puros, diseño de jerarquías de clases.
 
 - [Para acceder al README de CPP03 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP03/README.md)
 
@@ -135,21 +139,21 @@ Este proyecto profundiza en la programación orientada a objetos y el manejo ava
 
 ### Ejercicios
 
-- **Exercise 00: Polymorphism (Animal.cpp)**  
-  **Objetivo:** Implementar y entender el polimorfismo en C++ utilizando clases abstractas.  
-  **Conceptos:** Polimorfismo, clases abstractas, interfaces.
+- **Exercise 00: Polymorphism**  
+  **Objetivo:** Implementar una jerarquía de clases de animales para demostrar el polimorfismo en C++.  
+  **Conceptos:** Polimorfismo, funciones virtuales, jerarquías de clases.
 
-- **Exercise 01: I Don't Want to Set the World on Fire (Brain.cpp)**  
-  **Objetivo:** Trabajar con excepciones y la implementación de clases para manejar errores.  
-  **Conceptos:** Manejo de excepciones, diseño de clases para seguridad.
+- **Exercise 01: I don't want to set the world on fire**  
+  **Objetivo:** Gestionar memoria y lógica en la clase `Brain`, integrándola con otras clases.  
+  **Conceptos:** Gestión de memoria, encapsulamiento, relaciones entre clases.
 
 - **Exercise 02: Abstract Class**  
-  **Objetivo:** Implementar clases abstractas y comprender su uso en la programación orientada a objetos.  
-  **Conceptos:** Clases abstractas, métodos puros.
+  **Objetivo:** Trabajar con clases abstractas que definen interfaces para clases derivadas.  
+  **Conceptos:** Clases abstractas, métodos puros virtuales, diseño orientado a interfaces.
 
-- **Exercise 03: Interface & Recap (Amateria.cpp)**  
-  **Objetivo:** Revisar y aplicar conceptos de interfaces y herencia en un contexto más amplio.  
-  **Conceptos:** Interfaces, revisión de conceptos OOP.
+- **Exercise 03: Interface & Recap**  
+  **Objetivo:** Implementar interfaces y consolidar los conceptos aprendidos en ejercicios anteriores.  
+  **Conceptos:** Interfaces en C++, recapitulación, diseño y organización del código.
 
 - [Para acceder al README de CPP04 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP04/README.md)
 
@@ -162,17 +166,21 @@ Este proyecto se enfoca en el manejo de excepciones y la serialización de datos
 
 ### Ejercicios
 
-- **Exercise 00: Conversion of Scalar Types (scalar.cpp)**  
-  **Objetivo:** Convertir entre tipos escalares y manejar la precisión y la pérdida de datos.  
-  **Conceptos:** Conversión de tipos, manejo de precisión.
+- **Exercise 00: I want to be a bureaucrat!**  
+  **Objetivo:** Implementar la clase `Bureaucrat`, que gestiona el rango de un burócrata y su capacidad para manejar formularios.  
+  **Conceptos:** Clases y atributos, validación de datos, gestión de excepciones.
 
-- **Exercise 01: Serialization (base.cpp)**  
-  **Objetivo:** Implementar y entender la serialización de datos y cómo convertir punteros a enteros.  
-  **Conceptos:** Serialización, conversión de punteros, manejo de datos.
+- **Exercise 01: Form up, maggots!**  
+  **Objetivo:** Crear la clase `Form`, que puede ser firmada o ejecutada por un `Bureaucrat`, con requisitos específicos.  
+  **Conceptos:** Definición de formularios, relación entre clases, control de acceso y métodos.
 
-- **Exercise 02: Identify Real Type (dynamic_cast)**  
-  **Objetivo:** Identificar el tipo real de un objeto utilizando `dynamic_cast` y técnicas de RTTI (Run-Time Type Identification).  
-  **Conceptos:** Identificación dinámica de tipos, uso de `dynamic_cast`.
+- **Exercise 02: You need form is 28B, not 28C**  
+  **Objetivo:** Manejar diferentes tipos de formularios con requisitos específicos para cada uno.  
+  **Conceptos:** Gestión de múltiples formularios, identificación y manejo de formularios, interacción entre burócratas y formularios.
+
+- **Exercise 03: Coffee-making**  
+  **Objetivo:** Implementar la clase `Intern`, que genera diferentes tipos de formularios según las solicitudes.  
+  **Conceptos:** Creación de objetos dinámicos, patrón de fábrica, manejo de memoria y recursos.
 
 - [Para acceder al README de CPP05 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP05/README.md)
 
@@ -185,18 +193,17 @@ Este proyecto profundiza en la gestión dinámica de memoria y el uso de casting
 ### Ejercicios
 
 - **Exercise 00: Conversion of Scalar Types (scalar.cpp)**  
-  **Objetivo:** Similar al ejercicio del CPP05, profundizar en la conversión de tipos escalares y su impacto.  
-  **Conceptos:** Conversión de tipos, precisión.
+  **Objetivo:** Explorar la conversión entre tipos escalares como int, float, double y char.  
+  **Conceptos:** Conversión de tipos escalares, precisión y pérdida de datos, técnicas de casting (static_cast).
 
 - **Exercise 01: Serialization (base.cpp)**  
-  **Objetivo:** Similar al ejercicio del CPP05, entender la serialización y deserialización de objetos.  
+  **Objetivo:** Implementar una clase `Serializer` para convertir punteros a enteros y viceversa.  
+  **Conceptos:** Serialización y deserialización, implementación de métodos estáticos, verificación de punteros.
 
+- **Exercise 02: Identify Real Type (dynamic_cast)**  
+  **Objetivo:** Identificar el tipo real de un objeto utilizando `dynamic_cast`.  
+  **Conceptos:** Generación aleatoria de objetos, identificación dinámica de tipos, polimorfismo y RTTI.
 
-  **Conceptos:** Serialización, punteros.
-
-- **Exercise 02: Identify Real Type**  
-  **Objetivo:** Profundizar en el uso de `dynamic_cast` y la gestión dinámica de tipos.  
-  **Conceptos:** Casting dinámico, identificación de tipos en tiempo de ejecución.
 
 - [Para acceder al README de CPP06 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP06/README.md)
 
@@ -209,16 +216,16 @@ Este proyecto se enfoca en el uso de plantillas y iteradores en C++.
 ### Ejercicios
 
 - **Exercise 00: Start with a Few Functions**  
-  **Objetivo:** Implementar funciones genéricas utilizando plantillas.  
-  **Conceptos:** Plantillas de funciones, generación de código genérico.
+  **Objetivo:** Implementar funciones genéricas usando plantillas para manejar distintos tipos de datos.  
+  **Conceptos:** Funciones plantillas, versatilidad del código, simplicidad y mantenimiento.
 
 - **Exercise 01: Iter**  
-  **Objetivo:** Trabajar con iteradores y su uso en contenedores STL.  
-  **Conceptos:** Iteradores, contenedores estándar, algoritmos.
+  **Objetivo:** Crear una función plantilla para iterar sobre elementos de un contenedor genérico.  
+  **Conceptos:** Iteradores y plantillas, aplicación de funciones a contenedores, flexibilidad en la programación.
 
 - **Exercise 02: Array**  
-  **Objetivo:** Implementar y manejar arrays genéricos utilizando plantillas.  
-  **Conceptos:** Arrays genéricos, manejo de datos en contenedores.
+  **Objetivo:** Implementar una clase plantilla para arreglos dinámicos, con funcionalidades para manipular elementos.  
+  **Conceptos:** Plantillas de clases, manejo de memoria, operaciones con arreglos.
 
 - [Para acceder al README de CPP07 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP07/README.md)
 
@@ -231,16 +238,16 @@ Este proyecto profundiza en estructuras de datos avanzadas y algoritmos.
 ### Ejercicios
 
 - **Exercise 00: Easy Find**  
-  **Objetivo:** Implementar una búsqueda eficiente en contenedores personalizados.  
-  **Conceptos:** Búsqueda en contenedores, estructuras de datos.
+  **Objetivo:** Implementar `easyfind`, una función plantilla para buscar elementos en contenedores estándar.  
+  **Conceptos:** Búsqueda en contenedores, uso de iteradores, plantillas de funciones.
 
 - **Exercise 01: Span**  
-  **Objetivo:** Implementar y comprender la estructura de datos "Span" para manejar rangos de datos.  
-  **Conceptos:** Manejo de rangos, estructuras de datos avanzadas.
+  **Objetivo:** Implementar una clase `Span` para gestionar un rango de enteros, permitiendo agregar números y calcular el rango.  
+  **Conceptos:** Gestión de contenedores dinámicos, cálculo de rango, manejo de excepciones.
 
 - **Exercise 02: Mutated Abomination**  
-  **Objetivo:** Trabajar con estructuras de datos mutables y entender sus propiedades.  
-  **Conceptos:** Mutabilidad, estructuras de datos avanzadas.
+  **Objetivo:** Extender `std::stack` con una clase `MutantStack` que añade operaciones como encontrar el valor mínimo y proporciona iteradores personalizados.  
+  **Conceptos:** Extensión de clases estándar, iteradores personalizados, manejo de valores extremos.
 
 - [Para acceder al README de CPP08 pulsa aquí](https://github.com/gjmacias/CPP/tree/main/CPP08/README.md)
 
